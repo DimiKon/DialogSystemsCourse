@@ -1,0 +1,158 @@
+version: "3.0"
+
+stories:
+- story: greeting
+  steps:
+  - intent: greet
+  - action: utter_greet_n_elicit
+
+- story: instructions
+  steps:
+  - intent: get_directions
+  - action: utter_directions
+
+- story: accept
+  steps:
+  - intent: accept_n_thank
+  - action: utter_extra_info
+
+- story: goodbye
+  steps:
+  - intent: no_extra_info_n_goodbye
+  - action: utter_goodbye
+
+- story: search movie by actor
+  steps:
+  - intent: search_by_actor
+  - action: utter_search_movie_by_actor
+  - action: action_search_movie_by_actor
+
+- story: search movie by director
+  steps:
+  - intent: search_by_director
+  - action: utter_search_movie_by_director
+  - action: action_search_movie_by_director
+
+- story: search release year
+  steps:
+  - intent: release_year
+  - action: utter_search_release_year
+  - action: action_search_release_year
+
+- story: search plot
+  steps:
+  - intent: plot_movie
+  - action: utter_search_plot
+  - action: action_search_plot
+
+- story: search rating
+  steps:
+  - intent: rating_movie
+  - action: utter_search_rating
+  - action: action_search_rating
+
+- story: search popular year
+  steps:
+  - intent: popularity_year
+  - action: utter_search_popularity_by_year
+  - action: action_search_popularity_by_year
+
+- story: search director
+  steps:
+  - intent: movie_director
+  - action: utter_search_movie_director
+  - action: action_search_movie_director
+
+- story: search actors
+  steps:
+  - intent: movie_actors
+  - action: utter_search_movie_actors
+  - action: action_search_movie_actors
+
+- story: search similar
+  steps:
+  - intent: similar_movies
+  - action: utter_search_similar_movies
+  - action: action_search_similar_movies
+
+- story: accept path 1
+  steps:
+  - intent: greet
+  - action: utter_greet_n_elicit
+  - intent: get_directions
+  - action: utter_directions
+  - intent: search_by_director
+  - action: utter_search_movie_by_director
+  - action: action_search_movie_by_director
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: movie_actors
+  - action: utter_search_movie_actors
+  - action: action_search_movie_actors
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: no_extra_info_n_goodbye
+  - action: utter_goodbye
+
+- story: accept path 2
+  steps:
+  - intent: greet
+  - action: utter_greet_n_elicit
+  - intent: get_directions
+  - action: utter_directions
+  - intent: search_by_actor
+  - action: utter_search_movie_by_actor
+  - action: action_search_movie_by_actor
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: rating_movie
+  - action: utter_search_rating
+  - action: action_search_rating
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: plot_movie
+  - action: utter_search_plot
+  - action: action_search_plot
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: no_extra_info_n_goodbye
+  - action: utter_goodbye
+
+- story: accept path 3
+  steps:
+  - intent: greet
+  - action: utter_greet_n_elicit
+  - intent: popularity_year
+  - action: utter_search_popularity_by_year
+  - action: action_search_popularity_by_year
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: movie_director
+  - action: utter_search_movie_director
+  - action: action_search_movie_director
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: no_extra_info_n_goodbye
+  - action: utter_goodbye
+
+- story: accept path 4
+  steps:
+  - intent: greet
+  - action: utter_greet_n_elicit
+  - intent: search_by_actor
+  - action: utter_search_movie_by_actor
+  - action: action_search_movie_by_actor
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: release_year
+  - action: utter_search_release_year
+  - action: action_search_release_year
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: similar_movies
+  - action: utter_search_similar_movies
+  - action: utter_search_similar_movies
+  - intent: accept_n_thank
+  - action: utter_extra_info
+  - intent: no_extra_info_n_goodbye
+  - action: utter_goodbye
