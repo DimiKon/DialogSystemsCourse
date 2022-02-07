@@ -1,4 +1,4 @@
-version: "3.0"
+version: "2.0"
 
 intents:
   - greet
@@ -22,24 +22,12 @@ entities:
 slots:
   director_name:
     type: text
-    mappings:
-    - type: from_entity
-      entity: director_name
   actor_name:
     type: text
-    mappings:
-    - type: from_entity
-      entity: actor_name
   movie_title:
     type: text
-    mappings:
-    - type: from_entity
-      entity: movie_name
   release_date:
     type: text
-    mappings:
-    - type: from_entity
-      entity: release_date
 responses:
   utter_greet_n_elicit:
   - text: γεια σου, σινεφίλ, είμαι το σίνεμποτ, τι ψάχνεις σήμερα;
